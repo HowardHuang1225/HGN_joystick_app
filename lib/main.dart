@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:project_a/demo.dart';
-import 'package:project_a/firstpage.dart';
-import 'package:project_a/info.dart';
-import 'package:project_a/settings.dart';
+import 'demo.dart';
+import 'firstpage.dart';
+import 'info.dart';
+import 'settings.dart';
 import 'homepage.dart';
 import 'reference.dart';
 

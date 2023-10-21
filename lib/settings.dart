@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 
-class Settings extends StatelessWidget {
+class Settings extends StatefulWidget {
+  @override
+  State<Settings> createState() => _SettingsState();
+}
+
+class _SettingsState extends State<Settings> {
   // const Settings({super.keys});
+  double _value = 0.5;
+  double __value = 0.5;
 
-  int _value = 5;
-  int _min = 0;
-  int _max = 10;
-
+  // int _min = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,12 +45,12 @@ class Settings extends StatelessWidget {
                 color: const Color.fromARGB(169, 158, 158, 158),
                 borderRadius: BorderRadius.circular(10)),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 TextButton(
                   onPressed: () {},
                   child: Text(
-                    "Set",
+                    "   Set1",
                     style: TextStyle(
                         fontStyle: FontStyle.italic,
                         fontSize: 20,
@@ -73,12 +77,12 @@ class Settings extends StatelessWidget {
                 color: const Color.fromARGB(169, 158, 158, 158),
                 borderRadius: BorderRadius.circular(10)),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 TextButton(
                   onPressed: () {},
                   child: Text(
-                    "Set",
+                    "   Set2",
                     style: TextStyle(
                         fontStyle: FontStyle.italic,
                         fontSize: 20,
@@ -105,16 +109,13 @@ class Settings extends StatelessWidget {
                 color: const Color.fromARGB(169, 158, 158, 158),
                 borderRadius: BorderRadius.circular(10)),
             child: Row(
+              mainAxisAlignment:MainAxisAlignment.spaceBetween,
               children: [
-                // Slider(
-                //     value: _value.toDouble(),
-                //     min: _min.toDouble(),
-                //     max: _max.toDouble(),
-                //     onChanged: ()),
+                
                 TextButton(
                   onPressed: () {},
                   child: Text(
-                    "Set",
+                    "   Set3",
                     style: TextStyle(
                         fontStyle: FontStyle.italic,
                         fontSize: 20,
@@ -124,6 +125,16 @@ class Settings extends StatelessWidget {
                         color: Colors.black),
                     textAlign: TextAlign.left,
                   ),
+                ),
+                Slider(
+                  min: 0.0,
+                  max: 1.0,
+                  value: _value,
+                  onChanged: (double value) {
+                    setState(() {
+                      _value = value;
+                    });
+                  },
                 ),
               ],
             ),
@@ -139,19 +150,34 @@ class Settings extends StatelessWidget {
             decoration: BoxDecoration(
                 color: const Color.fromARGB(169, 158, 158, 158),
                 borderRadius: BorderRadius.circular(10)),
-            child: TextButton(
-              onPressed: () {},
-              child: Text(
-                "Set  ",
-                style: TextStyle(
-                    fontStyle: FontStyle.italic,
-                    fontSize: 20,
-                    height: 1.6,
-                    fontFamily: "Caveat",
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black),
-                textAlign: TextAlign.left,
-              ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    "   Set4",
+                    style: TextStyle(
+                        fontStyle: FontStyle.italic,
+                        fontSize: 20,
+                        height: 1.6,
+                        fontFamily: "Caveat",
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                    textAlign: TextAlign.left,
+                  ),
+                ),
+                Slider(
+                  min: 0.0,
+                  max: 1.0,
+                  value: __value,
+                  onChanged: (double value) {
+                    setState(() {
+                      __value = value;
+                    });
+                  },
+                ),
+              ],
             ),
           ),
         ],
@@ -176,7 +202,7 @@ class _SwitchExampleState extends State<SwitchExample> {
     return Switch(
       // This bool value toggles the switch.
       value: light,
-      activeColor: Color.fromARGB(255, 102, 115, 107),
+      activeColor: Color.fromARGB(255, 34, 150, 222),
       onChanged: (bool value) {
         // This is called when the user toggles the switch.
         setState(() {
@@ -186,3 +212,5 @@ class _SwitchExampleState extends State<SwitchExample> {
     );
   }
 }
+
+/////////////////////////////
