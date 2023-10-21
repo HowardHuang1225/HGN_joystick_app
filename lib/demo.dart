@@ -22,7 +22,7 @@ class demo extends StatelessWidget {
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
-            Navigator.pushNamed(context, "/firstpage");
+            // Navigator.pushNamed(context, "/firstpage");
           },
           icon: Icon(
             Icons.arrow_back,
@@ -75,7 +75,7 @@ class demo extends StatelessWidget {
                 color: Color.fromARGB(70, 206, 147, 216),
                 borderRadius: BorderRadius.all(Radius.circular(10))),
             height: 600,
-            width: 355,
+            width: 376,
             child: Column(
               children: [
                 Text(

@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 class Settings extends StatelessWidget {
   // const Settings({super.keys});
 
+  int _value = 5;
+  int _min = 0;
+  int _max = 10;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,19 +40,25 @@ class Settings extends StatelessWidget {
             decoration: BoxDecoration(
                 color: const Color.fromARGB(169, 158, 158, 158),
                 borderRadius: BorderRadius.circular(10)),
-            child: TextButton(
-              onPressed: () {},
-              child: Text(
-                "Set",
-                style: TextStyle(
-                    fontStyle: FontStyle.italic,
-                    fontSize: 20,
-                    height: 1.6,
-                    fontFamily: "Caveat",
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black),
-                textAlign: TextAlign.left,
-              ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    "Set",
+                    style: TextStyle(
+                        fontStyle: FontStyle.italic,
+                        fontSize: 20,
+                        height: 1.6,
+                        fontFamily: "Caveat",
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                    textAlign: TextAlign.left,
+                  ),
+                ),
+                SwitchExample(),
+              ],
             ),
           ),
           Container(
@@ -62,19 +72,25 @@ class Settings extends StatelessWidget {
             decoration: BoxDecoration(
                 color: const Color.fromARGB(169, 158, 158, 158),
                 borderRadius: BorderRadius.circular(10)),
-            child: TextButton(
-              onPressed: () {},
-              child: Text(
-                "Set",
-                style: TextStyle(
-                    fontStyle: FontStyle.italic,
-                    fontSize: 20,
-                    height: 1.6,
-                    fontFamily: "Caveat",
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black),
-                textAlign: TextAlign.left,
-              ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    "Set",
+                    style: TextStyle(
+                        fontStyle: FontStyle.italic,
+                        fontSize: 20,
+                        height: 1.6,
+                        fontFamily: "Caveat",
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                    textAlign: TextAlign.left,
+                  ),
+                ),
+                SwitchExample(),
+              ],
             ),
           ),
           Container(
@@ -88,19 +104,28 @@ class Settings extends StatelessWidget {
             decoration: BoxDecoration(
                 color: const Color.fromARGB(169, 158, 158, 158),
                 borderRadius: BorderRadius.circular(10)),
-            child: TextButton(
-              onPressed: () {},
-              child: Text(
-                "Set",
-                style: TextStyle(
-                    fontStyle: FontStyle.italic,
-                    fontSize: 20,
-                    height: 1.6,
-                    fontFamily: "Caveat",
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black),
-                textAlign: TextAlign.left,
-              ),
+            child: Row(
+              children: [
+                // Slider(
+                //     value: _value.toDouble(),
+                //     min: _min.toDouble(),
+                //     max: _max.toDouble(),
+                //     onChanged: ()),
+                TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    "Set",
+                    style: TextStyle(
+                        fontStyle: FontStyle.italic,
+                        fontSize: 20,
+                        height: 1.6,
+                        fontFamily: "Caveat",
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                    textAlign: TextAlign.left,
+                  ),
+                ),
+              ],
             ),
           ),
           Container(
@@ -131,6 +156,33 @@ class Settings extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+/////////////////////
+class SwitchExample extends StatefulWidget {
+  const SwitchExample({super.key});
+
+  @override
+  State<SwitchExample> createState() => _SwitchExampleState();
+}
+
+class _SwitchExampleState extends State<SwitchExample> {
+  bool light = true;
+
+  @override
+  Widget build(BuildContext context) {
+    return Switch(
+      // This bool value toggles the switch.
+      value: light,
+      activeColor: Color.fromARGB(255, 102, 115, 107),
+      onChanged: (bool value) {
+        // This is called when the user toggles the switch.
+        setState(() {
+          light = value;
+        });
+      },
     );
   }
 }

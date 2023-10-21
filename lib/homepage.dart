@@ -81,7 +81,7 @@ class HomePage extends StatelessWidget {
           ),
           Center(
             child: Container(
-                height: 180,
+                height: 230,
                 width: 320,
                 color: Color.fromARGB(36, 206, 147, 216),
                 alignment: Alignment.topLeft,
@@ -95,7 +95,7 @@ class HomePage extends StatelessWidget {
                       Navigator.pushNamed(context, "/demo");
                     },
                     child: Text(
-                      " demo  <-- Tab Here",
+                      " Quick guide  <-- Tab Here",
                       style: TextStyle(
                           fontStyle: FontStyle.italic,
                           fontSize: 20,

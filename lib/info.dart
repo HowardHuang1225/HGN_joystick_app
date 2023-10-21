@@ -85,7 +85,32 @@ class Info extends StatelessWidget {
                 color: const Color.fromARGB(169, 158, 158, 158),
                 borderRadius: BorderRadius.circular(10)),
             child: TextButton(
-              onPressed: () {},
+              onPressed: () => showDialog<String>(
+                context: context,
+                builder: (BuildContext context) => AlertDialog(
+                  title: const Text(
+                    'Our Email',
+                    style: TextStyle(fontSize: 22),
+                  ),
+                  content: const Text(
+                    'howardm511jb@gmail.com\nallen070533@gmail.com\ngonod32053205@gmail.com',
+                    style: TextStyle(fontSize: 15, height: 2.5),
+                  ),
+                  actions: <Widget>[
+                    // TextButton(
+                    //   onPressed: () => Navigator.pop(context, 'Cancel'),
+                    //   child: const Text('Cancel'),
+                    // ),
+                    TextButton(
+                      onPressed: () => Navigator.pop(context, 'OK'),
+                      child: const Text(
+                        'OK',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               child: Text(
                 "Contact us",
                 style: TextStyle(
