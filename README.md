@@ -1,4 +1,4 @@
-# project_a
+# HGN_joystick_app
 
 A new Flutter project.
 
