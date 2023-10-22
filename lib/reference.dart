@@ -35,11 +35,11 @@ class reference extends StatelessWidget {
                     context: context,
                     builder: (BuildContext context) => AlertDialog(
                       title: const Text(
-                        'Those are our references',
+                        'references',
                         style: TextStyle(fontSize: 22),
                       ),
                       content: const Text(
-                        'Those are our references.',
+                        'Here are some references.',
                         style: TextStyle(fontSize: 18),
                       ),
                       actions: <Widget>[
@@ -63,9 +63,21 @@ class reference extends StatelessWidget {
               ))
         ],
       ),
-      // body: Center(
-      //   child: SwitchExample(),
-      // ),
+      body: Center(
+        child: Container(
+          decoration: BoxDecoration(
+            color: Color.fromARGB(118, 76, 77, 78),
+            borderRadius: BorderRadius.circular(10)
+            
+            ),
+          
+          height: 600,
+          width: 300,
+          child: Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: Text("Dependences-\n\n      flutter_joystick\n\n      flutter_overlay_window\n\n\n\nURL-\n\n     https://www.desarrollolibre.net/blog/flutter/implement-a-joystick-in-flutter-and-flame?fbclid=IwAR1AdnpWpKenXzWpy8WWuWM-sgEVd9vn71_Q3NW9zn4hbagnqkuQLGQkTQc\n\nhttps://pub.dev/packages/flutter_overlay_window?fbclid=IwAR0ZharotGC-veP-WWLXk1p95rfB4AJD0mUueBFDqjxw_Vt4O1sFLtDuyxw",style: TextStyle(fontSize: 20,fontStyle: FontStyle.italic,fontWeight: FontWeight.bold),),
+          )),
+      ),
     );
   }
 }

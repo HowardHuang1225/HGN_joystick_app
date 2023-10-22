@@ -7,8 +7,10 @@ class Settings extends StatefulWidget {
 
 class _SettingsState extends State<Settings> {
   // const Settings({super.keys});
-  double _value = 0.5;
-  double __value = 0.5;
+  static double _value = 0.5;
+  static double __value = 0.5;
+  static bool _isEnabled1 = true;
+  static bool _isEnabled2 = true;
 
   // int _min = 0;
   @override
@@ -42,15 +44,17 @@ class _SettingsState extends State<Settings> {
             height: 50,
             width: 300,
             decoration: BoxDecoration(
-                color: const Color.fromARGB(169, 158, 158, 158),
+                color: const Color.fromARGB(
+                    169, 158, 158, 158),
                 borderRadius: BorderRadius.circular(10)),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment:
+                  MainAxisAlignment.spaceBetween,
               children: [
                 TextButton(
                   onPressed: () {},
                   child: Text(
-                    "   Set1",
+                    "  ClickThrough",
                     style: TextStyle(
                         fontStyle: FontStyle.italic,
                         fontSize: 20,
@@ -74,15 +78,17 @@ class _SettingsState extends State<Settings> {
             height: 50,
             width: 300,
             decoration: BoxDecoration(
-                color: const Color.fromARGB(169, 158, 158, 158),
+                color: const Color.fromARGB(
+                    169, 158, 158, 158),
                 borderRadius: BorderRadius.circular(10)),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment:
+                  MainAxisAlignment.spaceBetween,
               children: [
                 TextButton(
                   onPressed: () {},
                   child: Text(
-                    "   Set2",
+                    "  Shortcut",
                     style: TextStyle(
                         fontStyle: FontStyle.italic,
                         fontSize: 20,
@@ -106,16 +112,17 @@ class _SettingsState extends State<Settings> {
             height: 50,
             width: 300,
             decoration: BoxDecoration(
-                color: const Color.fromARGB(169, 158, 158, 158),
+                color: const Color.fromARGB(
+                    169, 158, 158, 158),
                 borderRadius: BorderRadius.circular(10)),
             child: Row(
-              mainAxisAlignment:MainAxisAlignment.spaceBetween,
+              mainAxisAlignment:
+                  MainAxisAlignment.spaceBetween,
               children: [
-                
                 TextButton(
                   onPressed: () {},
                   child: Text(
-                    "   Set3",
+                    "  Opacity",
                     style: TextStyle(
                         fontStyle: FontStyle.italic,
                         fontSize: 20,
@@ -148,15 +155,17 @@ class _SettingsState extends State<Settings> {
             height: 50,
             width: 300,
             decoration: BoxDecoration(
-                color: const Color.fromARGB(169, 158, 158, 158),
+                color: const Color.fromARGB(
+                    169, 158, 158, 158),
                 borderRadius: BorderRadius.circular(10)),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment:
+                  MainAxisAlignment.spaceBetween,
               children: [
                 TextButton(
                   onPressed: () {},
                   child: Text(
-                    "   Set4",
+                    "  StickSize",
                     style: TextStyle(
                         fontStyle: FontStyle.italic,
                         fontSize: 20,
@@ -191,7 +200,8 @@ class SwitchExample extends StatefulWidget {
   const SwitchExample({super.key});
 
   @override
-  State<SwitchExample> createState() => _SwitchExampleState();
+  State<SwitchExample> createState() =>
+      _SwitchExampleState();
 }
 
 class _SwitchExampleState extends State<SwitchExample> {

@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_overlay_window/flutter_overlay_window.dart';
+
 // import 'settings.dart';
 // import 'info.dart';
 
@@ -49,7 +51,7 @@ class HomePage extends StatelessWidget {
                 color: Color.fromARGB(41, 206, 147, 216),
               ),
               child: Text(
-                "   This app is willing to make the \n   expirience of using Pixal Phone\n   more convienient for accessibility\n   community people!",
+                "   This app is willing to make the \n   expirience of using Pixel Phone\n   more convienient for accessibility\n   community people!",
                 style: TextStyle(
                   fontStyle: FontStyle.italic,
                   fontSize: 20,
@@ -81,7 +83,7 @@ class HomePage extends StatelessWidget {
           ),
           Center(
             child: Container(
-                height: 230,
+                height: 280,
                 width: 320,
                 color: Color.fromARGB(36, 206, 147, 216),
                 alignment: Alignment.topLeft,
@@ -164,16 +166,39 @@ class HomePage extends StatelessWidget {
         width: 280,
         child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-                backgroundColor: const Color.fromARGB(255, 119, 39, 176),
+                backgroundColor:
+                    const Color.fromARGB(255, 119, 39, 176),
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30.0)),
-                textStyle:
-                    const TextStyle(fontSize: 40, fontWeight: FontWeight.bold)),
-            onPressed: () {},
-            child: Text("Start", textAlign: TextAlign.center)),
+                    borderRadius:
+                        BorderRadius.circular(30.0)),
+                textStyle: const TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold)),
+            onPressed: () {
+              Navigator.pushNamed(context, "/fakeapp");
+            },
+            onLongPress: () async {
+              debugPrint("OVERLAYYYYY");
+              if (!await FlutterOverlayWindow
+                  .isPermissionGranted()) {
+                await FlutterOverlayWindow
+                    .requestPermission();
+              } else {
+                debugPrint("r u goin 2 appear rn");
+                await FlutterOverlayWindow.showOverlay(
+                    height: 500,
+                    width: 500,
+                    alignment: OverlayAlignment.center,
+                    enableDrag: false,
+                    positionGravity: PositionGravity.none);
+              }
+            },
+            child:
+                Text("Start", textAlign: TextAlign.center)),
       ),
 
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButtonLocation:
+          FloatingActionButtonLocation.centerFloat,
     );
   }
 }

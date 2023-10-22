@@ -40,8 +40,8 @@ class Info extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(10.0),
               child: Text(
-                "Due to under lots of circumstances, for instance carrying stuffs, after amputation, cause the users only can use one of the hands to operate the phone. Thus, our group argue that it's vital to develop an application to make the usage with one hand of the phone to be more smoothy.",
-                style: TextStyle(fontSize: 17),
+                " The app we developed aims to make\n  it easy for everyone to use a \n smartphone, including those with \n hand injuries or physical disabilities.\n We have designed a special joystick\n that allows users to easily control the\n phone using just their thumb.",
+                style: TextStyle(fontSize: 17,height: 2,fontStyle: FontStyle.italic,fontWeight: FontWeight.w400),
               ),
             ),
           ),

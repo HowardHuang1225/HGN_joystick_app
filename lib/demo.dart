@@ -33,7 +33,8 @@ class demo extends StatelessWidget {
           IconButton(
               onPressed: () => showDialog<String>(
                     context: context,
-                    builder: (BuildContext context) => AlertDialog(
+                    builder: (BuildContext context) =>
+                        AlertDialog(
                       title: const Text(
                         'Guide:',
                         style: TextStyle(fontSize: 22),
@@ -48,7 +49,8 @@ class demo extends StatelessWidget {
                         //   child: const Text('Cancel'),
                         // ),
                         TextButton(
-                          onPressed: () => Navigator.pop(context, 'OK'),
+                          onPressed: () =>
+                              Navigator.pop(context, 'OK'),
                           child: const Text(
                             'OK',
                             style: TextStyle(fontSize: 16),
@@ -70,92 +72,101 @@ class demo extends StatelessWidget {
         children: [
           Container(
             decoration: BoxDecoration(
-                border: Border.all(color: Color.fromARGB(48, 0, 0, 0)),
+                border: Border.all(
+                    color: Color.fromARGB(48, 0, 0, 0)),
                 shape: BoxShape.rectangle,
                 color: Color.fromARGB(70, 206, 147, 216),
-                borderRadius: BorderRadius.all(Radius.circular(10))),
-            height: 600,
-            width: 376,
+                borderRadius:
+                    BorderRadius.all(Radius.circular(10))),
+            height:
+                MediaQuery.of(context).size.height * 0.8,
+            width: MediaQuery.of(context).size.width * 1.05,
             child: Column(
               children: [
                 Text(
-                  "\n  Step 1:",
+                  "\n  Step 1:\n",
                   style: TextStyle(
                       fontStyle: FontStyle.italic,
                       fontSize: 30,
                       height: 1,
                       fontWeight: FontWeight.bold),
                 ),
-                Image.asset('assets/images/doge.png')
+                Image.asset('assets/images/tutor_start.png',height: 580,)
               ],
             ),
           ),
           Container(
-            height: 664,
-            width: 374,
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width * 1.1,
             decoration: BoxDecoration(
-                border: Border.all(color: Color.fromARGB(48, 0, 0, 0)),
+                border: Border.all(
+                    color: Color.fromARGB(48, 0, 0, 0)),
                 shape: BoxShape.rectangle,
                 color: Color.fromARGB(50, 206, 147, 216),
-                borderRadius: BorderRadius.all(Radius.circular(10))),
+                borderRadius:
+                    BorderRadius.all(Radius.circular(10))),
             child: Column(
               children: [
                 Text(
-                  "\n  Step 2:",
+                  "\n  Step 2:\n",
                   style: TextStyle(
                       fontStyle: FontStyle.italic,
                       fontSize: 30,
                       height: 1,
                       fontWeight: FontWeight.bold),
                 ),
-                Image.asset('assets/images/doge.png')
+                Image.asset('assets/images/tutor_nav.png',height: 580,)
               ],
             ),
           ),
           Container(
-            height: 664,
-            width: 374,
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width * 1.1,
             decoration: BoxDecoration(
-                border: Border.all(color: Color.fromARGB(48, 0, 0, 0)),
+                border: Border.all(
+                    color: Color.fromARGB(48, 0, 0, 0)),
                 shape: BoxShape.rectangle,
                 color: Color.fromARGB(36, 206, 147, 216),
-                borderRadius: BorderRadius.all(Radius.circular(10))),
+                borderRadius:
+                    BorderRadius.all(Radius.circular(10))),
             child: Column(
               children: [
                 Text(
-                  "\n  Step 3:",
+                  "\n  Step 3:\n",
                   style: TextStyle(
                       fontStyle: FontStyle.italic,
                       fontSize: 30,
                       height: 1,
                       fontWeight: FontWeight.bold),
                 ),
-                Image.asset('assets/images/doge.png')
+                Image.asset('assets/images/tutor_click.png',height: 580,)
               ],
             ),
           ),
-          Container(
-            height: 664,
-            width: 374,
-            decoration: BoxDecoration(
-                border: Border.all(color: Color.fromARGB(48, 0, 0, 0)),
-                shape: BoxShape.rectangle,
-                color: Color.fromARGB(10, 206, 147, 216),
-                borderRadius: BorderRadius.all(Radius.circular(10))),
-            child: Column(
-              children: [
-                Text(
-                  "\n   Step 4:",
-                  style: TextStyle(
-                      fontStyle: FontStyle.italic,
-                      fontSize: 30,
-                      height: 1,
-                      fontWeight: FontWeight.bold),
-                ),
-                Image.asset('assets/images/doge.png')
-              ],
-            ),
-          ),
+          // Container(
+          //   height: MediaQuery.of(context).size.height,
+          //   width: MediaQuery.of(context).size.width * 1.1,
+          //   decoration: BoxDecoration(
+          //       border: Border.all(
+          //           color: Color.fromARGB(48, 0, 0, 0)),
+          //       shape: BoxShape.rectangle,
+          //       color: Color.fromARGB(10, 206, 147, 216),
+          //       borderRadius:
+          //           BorderRadius.all(Radius.circular(10))),
+          //   child: Column(
+          //     children: [
+          //       Text(
+          //         "\n   Step 4:",
+          //         style: TextStyle(
+          //             fontStyle: FontStyle.italic,
+          //             fontSize: 30,
+          //             height: 1,
+          //             fontWeight: FontWeight.bold),
+          //       ),
+          //       Image.asset('assets/images/doge.png')
+          //     ],
+          //   ),
+          // ),
         ],
       ),
     );
